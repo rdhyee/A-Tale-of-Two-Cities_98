@@ -1,0 +1,32 @@
+_repo: A-Tale-of-Two-Cities_98
+creator:
+  author:
+    agent_name: Dickens, Charles
+    alias: Boz
+    birthdate: 1812
+    deathdate: 1870
+    gutenberg_agent_id: '37'
+    url: http://www.gutenberg.org/2009/agents/37
+    wikipedia: http://en.wikipedia.org/wiki/Charles_Dickens
+gutenberg_bookshelf: Historical Fiction
+gutenberg_issued: '1994-01-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '98'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- '!lcsh:Historical fiction'
+- '!lcsh:Paris (France) -- History -- 1789-1799 -- Fiction'
+- '!lcsh:British -- France -- Paris -- Fiction'
+- '!lcsh:French -- England -- London -- Fiction'
+- '!lcsh:Executions and executioners -- Fiction'
+- '!lcsh:War stories'
+- '!lcc:PR'
+- '!lcsh:Lookalikes -- Fiction'
+- '!lcsh:London (England) -- History -- 18th century -- Fiction'
+- '!lcsh:France -- History -- Revolution, 1789-1799 -- Fiction'
+title: A Tale of Two Cities
+url: http://www.gutenberg.org/ebooks/98
