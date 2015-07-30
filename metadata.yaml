@@ -18,15 +18,15 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Historical fiction'
-- '!lcsh:Paris (France) -- History -- 1789-1799 -- Fiction'
-- '!lcsh:British -- France -- Paris -- Fiction'
-- '!lcsh:French -- England -- London -- Fiction'
-- '!lcsh:Executions and executioners -- Fiction'
 - '!lcsh:War stories'
+- '!lcsh:British -- France -- Paris -- Fiction'
+- '!lcsh:Historical fiction'
+- '!lcsh:French -- England -- London -- Fiction'
 - '!lcc:PR'
 - '!lcsh:Lookalikes -- Fiction'
-- '!lcsh:London (England) -- History -- 18th century -- Fiction'
 - '!lcsh:France -- History -- Revolution, 1789-1799 -- Fiction'
+- '!lcsh:Executions and executioners -- Fiction'
+- '!lcsh:Paris (France) -- History -- 1789-1799 -- Fiction'
+- '!lcsh:London (England) -- History -- 18th century -- Fiction'
 title: A Tale of Two Cities
 url: http://www.gutenberg.org/ebooks/98
