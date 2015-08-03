@@ -1,4 +1,5 @@
 _repo: A-Tale-of-Two-Cities_98
+_version: 0.0.1
 covers:
 - attribution: Alexis Lampley, 2015
   cover_type: original
@@ -20,9 +21,10 @@ gutenberg_type: Text
 identifiers:
   gutenberg: '98'
 language: en
-publisher: Project Gutenberg
-rights: Public domain in the USA.
-rights_url: http://creativecommons.org/about/pdm
+publication_date: '2015-08-01'
+publisher: Recovering the Classics
+rights: CC BY-NC
+rights_url: http://creativecommons.org/licenses/by-nc/4.0/
 subjects:
 - '!lcsh: British -- France -- Paris -- Fiction'
 - '!lcsh: French -- England -- London -- Fiction'
