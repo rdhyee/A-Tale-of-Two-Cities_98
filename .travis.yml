@@ -1,0 +1,32 @@
+language: ruby
+before_install:
+- gem install asciidoctor tilt
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- asciidoctor -a toc,version=$VERSION -b xhtml5 -T ./asciidoctor-htmlbook/htmlbook-autogen/
+  -d book book.asciidoc -o book.html
+- git clone https://github.com/gitenberg-dev/HTMLBook
+- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
+- cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
+- cp cover.jpg OEBPS/cover.jpg
+- if test -d "./images"; then mv ./images ./OEBPS/ ;fi
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
+- if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi 
+- mv book.epub A-Tale-of-Two-Cities.epub
+branches:
+  only:
+  - master
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: V7ReIdyet+wBY8v9n9jE5BmRvslZ9lkN0v2d9U0ZEY+rg56C8xApE+lZVmETZXR1nBGIXn0SvKvupBZtI7BJqekuZlHB7fE7+XOqHIcGOcb+JxkjdnCJeXftqwYmB73ayjMcxjHm/pwFaVFjKoakX69hVFxfxy4NDcRV8fFG3zh6ETB8pZHAqAs68iFX9PFcK7sIk8RaG8Jj6cMWRve1lvYeoJyJWoyqF6iCZAMMd/p/lPnEdfz75041zz6GPK0xmLFAA083QvEr3niAoYqhCuZTOUk1dhCJKt+hThOMISJ3HkgQ486Xxy0U6VMlpjYoI3ooVLE3mM3h3Cnqe+7DwDt/p2pFzKQHqTBqg8hLaKfX/i7MbNHXVOLTaXLNSn8AImVDUVlMKZYpqhwZR97grll2F1Rtut1SggnWLmLeHITRKWqQSQc/PAA6pPc/ytVJ3ja/z2HhjEnw79Jtdo7lrtxyuDa311RolLeDsNy3+oLALdNcCJhIDfrbQyxVEkd7koi10PtKvjHucTExshewTPPs7tep+txMHT5G5TpWEM36JLfCW5GcAH7rVrDPWsruvJdrFLODaCfOMzWBoG65/0CLaTKiSz+CQd46lABXwm0k4SIpiOPRdndc9F47f0kFhtRlCtfptfYc9t+VHcYKoNqv7w+5oI40xk9cj61UbO4=
+  file: A-Tale-of-Two-Cities.epub
+  "on":
+    repo: GITenberg/A-Tale-of-Two-Cities_98
+addons:
+  apt:
+    packages:
+    - xsltproc
