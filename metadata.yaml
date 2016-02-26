@@ -1,5 +1,5 @@
 _repo: A-Tale-of-Two-Cities_98
-_version: 0.0.3
+_version: 0.1.0
 covers:
 - attribution: Alexis Lampley, 2015
   cover_type: original
@@ -36,5 +36,6 @@ subjects:
 - '!lcsh: Historical fiction'
 - '!lcsh: London (England) -- History -- 18th century -- Fiction'
 - '!lcsh: Executions and executioners -- Fiction'
+- GITenberg
 title: A Tale of Two Cities
 url: http://www.gutenberg.org/ebooks/98
